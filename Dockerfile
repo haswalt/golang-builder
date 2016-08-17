@@ -6,9 +6,6 @@ RUN curl -sL https://github.com/Masterminds/glide/releases/download/0.10.2/glide
     && mv linux-amd64/glide /usr/local/bin && chmod +x /usr/local/bin/glide \
     && go get github.com/mattn/gom
 
-RUN mkdir -p /root/.ssh
-ADD keys/deploy_rsa /root/.ssh/id_rsa
-
 VOLUME /src
 WORKDIR /src
 
